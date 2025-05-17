@@ -15,6 +15,9 @@ Compared to **BLIP-2**, which is a more advanced successor designed for zero-sho
 
 Even in comparison to the original **BLIP**, the `blip-vqa-base` model is optimized specifically for VQA tasks, making it more focused and efficient for such use cases. Overall, it provides a practical middle ground—offering better performance than older models like VilBERT and smaller size than models like BLIP-2, while maintaining accuracy and speed ideal for real-world VQA systems.
 
+## Metrics
+Bert Score
+
 
 
 
