@@ -18,6 +18,7 @@ Even in comparison to the original **BLIP**, the `blip-vqa-base` model is optimi
 ## Metrics
 Bert Score
 
+![Description of the image](images/1.png)
 
 
 
