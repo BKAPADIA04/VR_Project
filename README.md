@@ -1,6 +1,7 @@
 # VR_Project
 
-
+## Train-Test Split
+An 80-20 train-test split divides the data so 80% is used to train the model and 20% to test its performance. This balance ensures the model learns well while providing enough unseen data to evaluate how accurately it generalizes to new inputs. It’s a simple and effective method to validate machine learning models.
 
 ## Baseline Model Evaluation
 
