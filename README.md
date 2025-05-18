@@ -108,7 +108,7 @@ The inference.py script is provided to perform Visual Question Answering using t
 - Navigate to the inference-setup folder on GitHub.
 - Run:
     ```bash 
-        pip install -r requirements.txt
+    pip install -r requirements.txt
 - Repeat the same process inside sample_submission/IMT2022026_095_549
 
 ### 2. Data Preparation
