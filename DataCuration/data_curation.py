@@ -7,7 +7,7 @@ import google.generativeai as genai
 from PIL import Image
 
 # Initialize Gemini API
-genai.configure(api_key="AIzaSyDtPHufDr_GwIHdppj8QMWMzSUpYVRMz9A")
+genai.configure(api_key="YOUR-API-KEY")
 model = genai.GenerativeModel("gemini-2.0-flash")
 
 def load_image_metadata(csv_path):
@@ -80,9 +80,9 @@ def load_existing_outputs(output_path):
     return []
 
 def main():
-    product_json_path = "../splits/chunk_1.json"
-    metadata_csv_path = "../abo-images-small/images/metadata/images.csv"
-    output_json_path = "output_1.json"
+    product_json_path = "./abo-listings/listings/metadata/listings_1.json"
+    metadata_csv_path = "./abo-images-small/images/metadata/images.csv"
+    output_json_path = "data.json"
     
     products = load_products(product_json_path)
     image_metadata = load_image_metadata(metadata_csv_path)
