@@ -4,7 +4,7 @@ This project enables Visual Question Answering (VQA) using the BLIP-vqa-base mod
 
 ---
 
-## 🔧 1. Dataset Curation
+## 1. Dataset Curation
 
 This step generates the train_dataset.csv and test_dataset.csv required for baseline evaluation and fine-tuning.
 
@@ -55,7 +55,7 @@ Even in comparison to the original *BLIP*, the blip-vqa-base model is optimized 
 
 ![F1](images/3.png) -->
 
-## 🔧 2. Baseline Evaluation
+## 2. Baseline Evaluation
 
 The blip-base-model.ipynb notebook is used to generate baseline predictions on the test_dataset.csv.
 
@@ -92,6 +92,37 @@ The lora-final-model.ipynb notebook is used to fine-tune the model and generate 
 
 ---
 
-## 🔧 3. Inference with Fine-Tuned Model
+## 4. Inference with Fine-Tuned Model
 The inference.py script is provided to perform Visual Question Answering using the fine-tuned model. It loads the base BLIP-VQA-Base model, applies the trained LoRA adapter, and generates answers for questions listed in an input CSV file.
+
+## 5. Setup and Usage Instructions
+### 1. Prerequisites
+
+- Ensure Python version **3.9 or later** (≥ 3.9) is installed.
+- Create a new Python environment using **conda**:
+  ```bash
+  conda create -n vqa_env python=3.9
+  conda activate vqa_env
+
+- Install required dependencies
+- Navigate to the inference-setup folder on GitHub.
+- Run:
+    ```bash 
+        pip install -r requirements.txt
+- Repeat the same process inside sample_submission/IMT2022026_095_549
+
+### 2. Data Preparation
+- Image Directory: A folder that contains all the images referenced in the CSV file.
+- CSV File: A CSV input file (e.g., metadata.csv) that includes at minimum the following columns: image_name and question.
+
+### 3. Run The Script
+    ```bash
+    python inference.py
+    --image-dir /path/to/your/image_folder
+    --csv-path /path/to/your/input.csv
+
+
+### 4. Output	
+Upon completion, a CSV file (results.csv by default, or as specified by --output_csv_path) will be generated.
+This output file will contain: The original input data and An additional column with the model’s predicted answerscewdc
 
