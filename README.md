@@ -4,11 +4,6 @@ This project enables Visual Question Answering (VQA) using the BLIP-vqa-base mod
 
 ---
 
-## 📁 Project Structure
-![alt text](./images/4.png)
-
----
-
 ## 🔧 1. Dataset Curation
 
 This step generates the train_dataset.csv and test_dataset.csv required for baseline evaluation and fine-tuning.
