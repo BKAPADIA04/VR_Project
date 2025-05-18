@@ -124,5 +124,5 @@ The inference.py script is provided to perform Visual Question Answering using t
 
 ### 4. Output	
 Upon completion, a CSV file (results.csv by default, or as specified by --output_csv_path) will be generated.
-This output file will contain: The original input data and An additional column with the model’s predicted answerscewdc
+This output file will contain: The original input data and An additional column with the model’s predicted answers.
 
