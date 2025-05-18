@@ -1,4 +1,34 @@
-# VR_Project
+# Visual Question Answering with BLIP-vqa-base and LoRA Fine-Tuning
+
+This project enables Visual Question Answering (VQA) using the BLIP-vqa-base model. It includes dataset preparation, baseline evaluation, fine-tuning with LoRA, and inference using the fine-tuned model.
+
+---
+
+## 📁 Project Structure
+![alt text](./images/4.png)
+
+---
+
+## 🔧 1. Dataset Curation
+
+This step generates the train_dataset.csv and test_dataset.csv required for baseline evaluation and fine-tuning.
+
+
+### Required Inputs:
+- `abo-images-small.tar` or extracted images: `extracted-folder/images/small/`
+- `images.csv.gz`
+- `listings_*.json.gz` files from the [ABO dataset](https://github.com/google-research/google-research/tree/master/attribute-based-object-representations)
+
+### Steps:
+1. Place all required ABO dataset files in an accessible location.
+2. Run `data_curation.py`:
+   - Requires Gemini API key.
+   - Produces:
+     - `data.json`: raw Q&A pairs.
+3. Run `train_test.py`:
+   - Generates final train and test datasets: `train_dataset.csv` and `test_dataset.csv`.
+
+---
 
 ## Train-Test Split
 An 80-20 train-test split divides the data so 80% is used to train the model and 20% to test its performance. This balance ensures the model learns well while providing enough unseen data to evaluate how accurately it generalizes to new inputs. It’s a simple and effective method to validate machine learning models.
